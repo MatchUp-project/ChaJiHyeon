@@ -1,6 +1,7 @@
 package com.mysite.sbb.question;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import com.mysite.sbb.answer.Answer;
 import jakarta.persistence.CascadeType;
@@ -28,5 +29,5 @@ public class Question {
     private LocalDateTime createDate;
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
-    private List<Answer> answerlist;
+    private List<Answer> answerList = new ArrayList<>();
 }
